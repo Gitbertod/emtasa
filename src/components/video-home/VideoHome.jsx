@@ -1,4 +1,5 @@
 import bgvideo2 from "../../assets/homeVideo.mp4";
+import HeroContent from "../hero-content/HeroContent";
 import styles from "./VideoHome.module.css";
 
 const VideoHome = () => {
@@ -13,6 +14,7 @@ const VideoHome = () => {
         playsInline 
         className={styles.video}
       ></video>
+      <HeroContent></HeroContent>
     </div>
   );
 };

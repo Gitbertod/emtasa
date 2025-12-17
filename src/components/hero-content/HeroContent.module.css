@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 2rem;
+  z-index: 1;
+  position: relative;
+}
+
+.content {
+  max-width: 900px;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.title {
+  font-family: "Funnel Sans", "Georgia", serif;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.5px;
+}
+
+.description {
+  font-family: "Funnel Sans", "Segoe UI", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.3px;
+}
+
+.highlight {
+  font-weight: 800;
+  color: #ffffff;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    min-height: auto;
+    padding: 3rem 1rem;
+    padding-top: 80px;
+  }
+
+  .title {
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}

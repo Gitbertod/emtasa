@@ -14,9 +14,9 @@
   z-index: 100;
 
   /* Glass effect */
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255);
+  /*backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); */
 
   /* Subtle border & depth */
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -28,7 +28,7 @@
 .navbar a {
   float: left;
   font-size: 16px;
-  color: rgb(199, 199, 199);
+  color: rgb(20, 54, 134);
   text-align: center;
   text-decoration: none;
   align-items: center;

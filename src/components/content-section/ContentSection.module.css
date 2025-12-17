@@ -1,0 +1,158 @@
+.section {
+  width: 100%;
+  padding: 6rem 2rem;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.section:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.layout-left {
+  grid-template-columns: 0.75fr 1.25fr;
+}
+
+.layout-right {
+  grid-template-columns: 1.25fr 0.75fr;
+  direction: rtl;
+}
+
+.layout-right > * {
+  direction: ltr;
+}
+
+.imageContainer {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  animation: slideIn 0.8s ease-out;
+  /* AJUSTA AQUÍ: Modifica height para cambiar la altura de la imagen */
+  /* Valores recomendados: 400px (pequeña), 500px (mediana), 600px (grande), 700px (muy grande) */
+  height: 700px;
+  display: block;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.imageContainer:hover .image {
+  transform: scale(1.05);
+}
+
+.textContent {
+  animation: fadeInUp 0.8s ease-out;
+  padding: 1rem 0;
+}
+
+.title {
+  font-family: "Funnel Sans", "Georgia", serif;
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 1.25rem;
+  line-height: 1.35;
+  letter-spacing: -0.3px;
+}
+
+.description {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: clamp(0.95rem, 1.8vw, 1rem);
+  color: #555555;
+  line-height: 1.75;
+  font-weight: 400;
+  margin-bottom: 0;
+  letter-spacing: 0.2px;
+}
+
+.highlight {
+  color: #f9b03a;
+  font-weight: 600;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.layout-right .imageContainer {
+  animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .layout-left,
+  .layout-right {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .layout-right > * {
+    direction: ltr;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .imageContainer {
+    min-height: 400px;
+  }
+}
