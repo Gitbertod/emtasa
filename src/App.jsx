@@ -5,7 +5,8 @@ import NavBar from "./components/navbar/NavBar";
 import VideoHome from "./components/video-home/VideoHome";
 import Footer from "./components/footer/Footer";
 import MultipleSwiper from "./components/multipleSwiper/MultipleSwiper";
-import { clientes } from "./components/multipleSwiper/logos";
+import { clientes, clientes2 } from "./components/multipleSwiper/logos";
+import SectionComponent from "./components/section/SectionComponent";
 
 function App() {
   return (
@@ -29,11 +30,18 @@ function App() {
         layout="rigth"
         highlight="palabra destacada"
       />
-      <MultipleSwiper
-        title="Clientes que han confiando en nosotros"
-        items={clientes}
-        folder="/logosClientes"
-      ></MultipleSwiper>
+      <SectionComponent>
+        <MultipleSwiper
+          title="Clientes que han confiando en nosotros"
+          items={clientes}
+          folder="/logosClientes"
+        ></MultipleSwiper>
+        <MultipleSwiper
+          items={clientes2}
+          folder="/logosClientes"
+          reverse={true}
+        ></MultipleSwiper>
+      </SectionComponent>
       <Footer />
     </>
   );

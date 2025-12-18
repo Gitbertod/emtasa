@@ -1,11 +1,18 @@
 export const clientes = [
-  "logoipsum-414.svg",
-  "logoipsum-412.png",
-  "logoipsum-378.svg",
+  "logo_banco_pichincha_portada.jpg",
+  "arval.png",
+  "sony-2-logo-svgrepo-com.svg",
   "hewlett-packard-enterprise-logo.svg",
-  "logoipsum-261.svg"
+  "farmaciasperuanas.png"
 ];
 
+export const clientes2 = [
+  "ibm.svg",
+  "metrocolor-logo.png",
+  "sony-2-logo-svgrepo-com.svg",
+  "hewlett-packard-enterprise-logo.svg",
+  "metalpren.png"
+];
 
 
 
